@@ -1,0 +1,33 @@
+.tooltip-container {
+    position: absolute;
+    bottom: -50px;
+    animation: slideDown .3s ease;
+}
+
+.tooltip-container-hide {
+    position: absolute;
+    bottom: -50px;
+    animation: slideUp .3s ease forwards;
+}
+
+.tooltip {
+    position: relative;
+    width: fit-content;
+    padding: 10px;
+    background-color: var(--logo-color);
+    border-radius: 5px;
+    color: var(--white-color);
+}
+
+.tooltip::before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 0;
+    height: 0;
+    border: 10px solid transparent;
+    border-top: 0;
+    border-bottom: 10px solid var(--logo-color);
+}

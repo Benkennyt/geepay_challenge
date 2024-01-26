@@ -1,0 +1,68 @@
+.switch {
+    position: relative;
+    width:50px;
+    height: 120px;
+    padding-left: 5px;
+    margin-bottom: 20px;
+}
+
+
+label {
+    width: 46px;
+    height: 92px;
+    position: relative;
+    background:#ebebeb ;
+    border-radius: 100px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+ label:after {
+    content: '';
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    background: var(--logo-color);
+    border-radius: 180px;
+    transition: 0.3s;
+}
+
+.switch input {
+    width: 0;
+    height: 0;
+    visibility: hidden;
+}
+
+.switch input:checked + label {
+    background-color: rgb(0, 0, 0);
+}
+.switch input:checked + label:after {
+    top: 84px;
+    transform: translateY(-100%);
+    background: linear-gradient(180deg, #777, #3a3a3a);
+}
+
+label:active:after {
+    height: 40px;
+}
+
+.tg-icon{
+    position: absolute;
+    z-index: 1;
+}
+
+.sun-icon-adjust {
+    top: 13px;
+    left: 13px;
+}
+
+.moon-icon-adjust {
+    top: 54px;
+    left: 8px;
+}
+
+.icon-green svg path {
+    fill:var(--logo-color) ;
+}

@@ -1,0 +1,103 @@
+.last-orders-container {
+    width: 100%;
+    max-width: 764px;
+    height: fit-content; 
+    background-color: var(--white-color);
+    padding: 20px;
+    border-radius: 14px;
+}
+
+.last-orders-header {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.last-orders-header p, .last-orders-header a {
+    font-size: 18px;
+    font-weight: 600;
+    color: var( --header-color);
+    margin: 0;
+}
+
+.last-orders-header a {
+    color: var(--logo-color);
+    font-weight: 500;
+    text-decoration: none;
+}
+
+table {
+    width: 100%;
+    max-width: 806px;
+    border-collapse: collapse;
+    font-size: 16px;
+    text-align: left;
+}
+
+table td, th {
+    border-bottom: solid 1px var(--table-border-color) ;
+    padding: 16px 0 16px 0 ;
+
+}
+
+table tr:last-child td {
+    border-bottom: 0px ;
+}
+
+table th {
+    text-align: left;
+    color: var(--table-header-color);
+    font-weight: 500;
+
+}
+
+table td {
+    color: var(--table-header-color);
+    font-weight: 400;
+}
+
+
+.client-name-payment {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    font-weight: 500;
+    color: var(--header-color-2);
+    gap: 10px;
+}
+
+.client-name-payment img {
+    width: 32px;
+    height: 32px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.client-date-payment {
+    font-weight: 400;
+    color: var(--table-text-color);
+}
+
+.client-amount-payment {
+    font-weight: 500;
+    color: var(--table-text-color-2);
+}
+
+table tr td a {
+    display: flex;
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--table-text-color-2);
+    text-decoration: none;
+    gap: 5px;
+}
+
+
+table tr .paid {
+    color: var(--logo-color);
+}
+
+table tr .refund {
+    color: var(--red-text-color);
+}
+
