@@ -6,7 +6,9 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-family: Plus Jakarta Sans;
-
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
 }
 
@@ -15,13 +17,14 @@ code {
     monospace;
 }
 
-:root {
+.light-mode {
   /* colors */
   --logo-color:#34CAA5;
   --transparentLogo-color:#34caa432;
   --transparent-background-red-color:rgba(237, 84, 78, 0.12);
   --header-color:#26282C ;
   --header-color-2:#3A3F51;
+  --caret-color:black;
   --table-header-color:#9CA4AB;
   --table-text-color:#737373;
   --table-text-color-2:#0D062D;
@@ -41,6 +44,50 @@ code {
   --platform-grey-text-color:#525252;
   --progress-bar-background-color:#F5F5F5;
   --grey-icon-color:#B2ABAB;
+  --previousM-text-color:#606060;
+  --profile-text-grey-color:#787486;
+  --focus-color-2:rgb(47, 47, 47);
+  --unfocus-color-2:#B2ABAB;
+  --header-icon-color:rgb(47, 47, 47);
+  --box-shadow-color:rgba(0,0,0,0.25);
+
+}
+
+.dark-mode {
+    /* colors */
+    --logo-color:#34CAA5;
+    --transparentLogo-color:#34caa432;
+    --transparent-background-red-color:rgba(237, 84, 78, 0.12);
+    --header-color:#ccd6f6 ;
+    --header-color-2:#ccd6f6;
+    --caret-color:#34CAA5;
+    --table-header-color:#ccd6f6;
+    --table-text-color:#8892b0;
+    --table-text-color-2:#8892b0;
+    --text-color-grey:#8892b0;
+    --red-text-color:#ED544E;
+    --placeHolder-color: #8892b0;
+    --border-color:#34CAA5;
+    --border-color-2:#ccd6f6;
+    --border-color-3: #ccd6f6;
+    --border-color-4: #ccd6f6;
+    --table-border-color:#34CAA5;
+    --sidebarBackground-color:rgb(9, 14, 27);
+    --mainContainer-color:rgb(9, 14, 27);
+    --white-color: rgb(15 23 42);
+    --barChartTooltip-color: #34CAA5;
+    --platform-header-text-color:#ccd6f6;
+    --platform-grey-text-color:#8892b0;
+    --progress-bar-background-color:#ccd6f6;
+    --grey-icon-color:#B2ABAB;
+    --profile-text-grey-color:#8892b0;
+    --previousM-text-color:#8892b0;
+    --focus-color-2:#34CAA5;
+    --unfocus-color-2:#ccd6f6;
+    --header-icon-color:#8892b0;
+    --box-shadow-color:#34caa44b;
+
+    background-color:rgb(15 23 42);
 }
 
 button {
@@ -71,6 +118,15 @@ button {
   100%{display: none; opacity: 0;}
 }
 
+@keyframes slideInLeft {
+  0% {transform: translateX(-100%); opacity: 0;}
+  100%{transform: translateX(0%); opacity: 1;}
+}
+
+@keyframes slideOutLeft {
+  0% {transform: translateX(0%); opacity: 1;}
+  100%{transform: translateX(-100%); opacity: 0;}
+}
 
 @keyframes slideDown2 {
   0% {transform: translateY(-100%);}
@@ -79,12 +135,14 @@ button {
 
 @keyframes slideUp2 {
   0% {transform: translateY(0%); }
-  100%{transform: translateY(-100%); }
+  97%{transform: translateY(-100%); opacity: 1;}
+  100%{transform: translateY(-100%); opacity: 0; }
 }
 
 @keyframes reduceH {
   0% {height: 170px;}
-  100%{height: 0;}
+  97%{ opacity: 1;}
+  100%{height: 0; opacity: 0;}
 }
 
 @keyframes increaseH {
@@ -94,7 +152,8 @@ button {
 
 @keyframes reduceH2 {
   0% {height: 80px;}
-  100%{height: 0;}
+  97%{ opacity: 1;}
+  100%{height: 0; opacity: 0;}
 }
 
 @keyframes increaseH2 {

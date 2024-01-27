@@ -1,0 +1,135 @@
+.totals-chart {
+    width: 100%;
+    height: fit-content;
+    max-width: 494px;
+    min-width: 494px;
+    background-color: transparent;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap:16px;
+}
+
+.totals {
+    width: 207px;
+    height: 147px;
+    background-color: var(--white-color);
+    padding: 16px;
+    display: grid;
+    gap: 10px;
+    border-radius: 14px;
+}
+
+.total-icons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.total-top-left-icon {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    border: 1px solid var(--border-color-4);
+}
+
+.total-figure {
+    display: grid;
+    text-align: left;
+    gap: 10px;
+}
+
+.total-figure p:first-child {
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--text-color-grey);
+    margin: 0;
+}
+
+.total-figure p:last-child {
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--header-color-2);
+    margin: 0;
+}
+
+.total-bottom-remark{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-width: 207px;
+}
+.total-bottom-remark p:last-child {
+    font-family: Inter;
+    font-size: 14px;
+    font-weight: 400;
+    margin: 0;
+}
+
+.previous-month {
+    color: var(--previousM-text-color);
+}
+
+.total-percentage{
+    width: 70px;
+    height: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1000px;
+}
+
+.total-percentage p {
+    font-size: 12px;
+    font-weight: 500;
+    margin-left: 5px;
+}
+
+.green-percent {
+    background-color: var(--transparentLogo-color);
+    color: var(--logo-color);
+}
+
+.red-percent {
+    background-color: var(--transparent-background-red-color);
+    color: var(--red-text-color);
+}
+
+
+/* media queries.......................................... */
+
+
+@media screen and (max-width: 1204px) {
+    .totals-chart {
+        width: unset;
+        max-width: unset;
+        min-width: unset;
+        flex-wrap: unset;
+        overflow-x: auto;
+        overflow-y: hidden;
+        scroll-snap-type: x mandatory;
+        scroll-behavior: smooth;
+        white-space: nowrap;
+        -ms-overflow-style: none;  
+        scrollbar-width: none;
+    }
+    
+    .totals-chart::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 467px) {
+    .totals-chart {
+        flex-direction: column ;
+        overflow-x: unset ;
+    }
+
+    .totals {
+        width: unset;
+    }
+ }

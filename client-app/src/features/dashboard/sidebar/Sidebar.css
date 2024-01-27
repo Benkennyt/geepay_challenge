@@ -1,0 +1,149 @@
+.sidebar {
+    position: relative;
+    width: 80px;
+    height: 836px;
+    max-height: 876px;
+    display: flex;
+    padding: 20px 0px;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    border-right: 1px solid var(--border-color);
+    background: var(--sidebarBackground-color);
+    z-index: 1005 !important;
+}
+
+.sidebar button {
+    background-color: transparent;
+    border: none;
+    width: fit-content;
+    height: fit-content;
+    margin: auto;
+}
+
+.sidebar-1{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.close-btn {
+    display: none;
+}
+
+.top-icons {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.icons-1 {
+    width: 100%;
+}
+
+.icons-1 button {
+    position: relative;
+}
+
+.icons-1 button, .icons-1 button svg  {
+    transition: all .5s ease-in-out ;
+}
+
+.icons-1 button:hover svg:first-child{
+    transform: rotate(45deg) !important;
+}
+
+
+.icons-1 button:hover svg:first-child path {
+    stroke: var(--logo-color);
+}
+
+.focused-btn svg path {
+    stroke: var( --focus-color-2);
+}
+
+.focused-btn svg:nth-child(2) path {
+    fill: var( --focus-color-2) ;
+}
+
+.unfocused-btn svg path {
+    stroke: var(--unfocus-color-2);
+}
+
+.unfocused-btn svg:nth-child(2) path {
+    fill: var( --focus-color-2) ;
+}
+
+.focused-btn-bulk-icon svg path {
+    fill: var(--focus-color-2);
+    stroke: unset !important;
+}
+
+.focused-btn-bulk-icon:hover svg path {
+    fill: var(--logo-color);
+    stroke: unset !important;
+}
+
+.unfocused-btn-bulk-icon svg path {
+    fill: var(--unfocus-color-2);
+    stroke: unset !important;
+}
+
+.unfocused-btn-bulk-icon:hover svg path {
+    fill: var(--logo-color);
+    stroke: unset !important;
+}
+
+.icons-1 button svg:nth-child(2) {
+    position: absolute;
+    right: -21px;
+    top: 3px;
+}
+
+.sidebar-2 path {
+    stroke: var(--unfocus-color-2);
+}
+
+/* switch */
+.switch {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.sidebar-2{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+@media screen and (max-width: 851px) {
+
+    .sidebar {
+        position: absolute;
+        z-index: 1000;
+        animation: slideInLeft .5s forwards;
+    }
+
+    
+    .logo {
+        position: relative;
+    }
+    
+    .close-btn {
+        position: absolute;
+        display: unset;
+        left: 80px;
+        background-color: var(--sidebarBackground-color) !important;
+        width: 50px !important;
+        height: 50px !important;
+        border: 1px solid var(--border-color) !important;
+        border-radius: 0 10px 10px 0;
+    }
+    
+    .sidebar-hide {
+        animation: slideOutLeft .5s forwards !important;
+    }
+}

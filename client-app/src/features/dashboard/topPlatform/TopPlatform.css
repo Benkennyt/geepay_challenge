@@ -8,12 +8,12 @@
 }
 
 .top-platform-header-1{
-    padding: 10px;
+    padding: 20px;
 }
 
 .add-shadow{
     position: relative;
-    box-shadow: 0 2px 4px -1px rgba(0,0,0,0.25);
+    box-shadow: 0 2px 4px -1px var(--box-shadow-color);
 }
 
 .top-platform-header {
@@ -39,7 +39,7 @@
 /* platforms */
 
 .platform-1 {
-    padding: 0px 10px 10px 10px;
+    padding: 0px 20px 20px 20px;
     height: 100%;
 }
 
@@ -120,4 +120,15 @@
     font-size: 18px !important;
     font-weight: 400 !important;
     color: var(--platform-grey-text-color) !important;
+}
+
+
+/* media queries........................... */
+
+@media screen and (max-width: 1024px) {
+
+    .top-platform-container {
+        width: unset !important;
+        max-width: unset !important;
+    }
 }

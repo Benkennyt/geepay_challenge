@@ -1,12 +1,12 @@
 .tooltip-container {
     position: absolute;
-    bottom: -50px;
+    bottom: -40px;
     animation: slideDown .3s ease;
 }
 
 .tooltip-container-hide {
     position: absolute;
-    bottom: -50px;
+    bottom: -40px;
     animation: slideUp .3s ease forwards;
 }
 
@@ -17,17 +17,20 @@
     background-color: var(--logo-color);
     border-radius: 5px;
     color: var(--white-color);
+    font-family: Inter;
+    font-size: 12px;
+    font-weight: 500;
 }
 
 .tooltip::before {
     content: '';
     position: absolute;
-    top: -5px;
+    top: -2px;
     left: 50%;
     transform: translate(-50%,-50%);
     width: 0;
     height: 0;
-    border: 10px solid transparent;
+    border: 5px solid transparent;
     border-top: 0;
-    border-bottom: 10px solid var(--logo-color);
+    border-bottom: 5px solid var(--logo-color);
 }

@@ -1,6 +1,7 @@
 .last-orders-container {
     width: 100%;
-    max-width: 764px;
+    max-width: 780px;
+    min-width: 530px;
     height: fit-content; 
     background-color: var(--white-color);
     padding: 20px;
@@ -100,4 +101,42 @@ table tr .paid {
 table tr .refund {
     color: var(--red-text-color);
 }
+
+/* media queries............... */
+
+@media screen and (max-width: 1024px) {
+
+    .last-orders-container {
+        width: unset !important;
+        max-width: unset !important;
+    }
+
+    .last-orders-container table  {
+        max-width: unset;
+       
+    }
+}
+
+@media screen and (max-width: 681px) {
+
+    .last-orders-container {
+        min-width: unset !important;
+    }
+
+    .table-container {
+        width: 100%;
+        overflow-x: scroll;
+        scroll-behavior: smooth;
+    }
+
+    .table-container table {
+        min-width: 510px !important;
+    }
+ }
+
+ @media screen and (max-width: 579px) {
+    .table-container {
+        box-shadow: -11px -4px 21px -19px var(--box-shadow-color) inset;
+    }
+ }
 

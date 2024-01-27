@@ -1,9 +1,20 @@
 import './Switch.css'
 import { BrightIcon, MoonIcon } from '../assets/SVG'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
-const Switch = () => {
-    const [isToggled, setIsToggled] = useState(false)
+const Switch = (props : any) => {
+    const {isToggled, setIsToggled}= props
+
+    useEffect(() => {
+        if (isToggled) {
+            document.body.classList.add('dark-mode')
+            document.body.classList.remove('light-mode')
+        } else {
+            document.body.classList.add('light-mode')
+            document.body.classList.remove('dark-mode')
+        }
+    },[isToggled])
+    
   return (
     <div className="switch">
         <input checked={isToggled} id='darkmode-toggle' onChange={() => setIsToggled(!isToggled)} type="checkbox" />

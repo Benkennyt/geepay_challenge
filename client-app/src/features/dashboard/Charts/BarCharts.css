@@ -1,0 +1,197 @@
+.barchart-container {
+    width: 100%;
+    max-width: 806px;
+    padding: 20px;
+    background-color: var(--white-color);
+    border-radius: 14px;
+}
+
+
+.barchart-header {
+    position: relative;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.barchart-header p {
+    font-size: 18px;
+    font-weight: 600;
+    color: var( --header-color);
+    margin: 0;
+}
+
+.sortby {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.sortby p {
+    font-size: 14px;
+    font-weight: 500;
+    color: var( --header-color-2);
+}
+
+.weekly {
+    position: relative;
+    display: flex;
+    width: 96px;
+    height: 32px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 25px;
+    border: 1.5px solid var(--border-color-3);
+    background: var(--white-color);
+    z-index: 101;
+}
+
+.weekly::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 0;
+    height: 0;
+    margin: auto;
+    border-radius: 28px;
+    z-index: -1;
+    background-color: var(--transparentLogo-color);
+    transition: all .2s ease;
+}
+
+
+
+.weekly:hover {
+    border: 1px solid var(--logo-color);
+}
+
+.weekly:hover::before {
+    width: 96px;
+    height: 32px;
+    background-color: var(--transparentLogo-color);
+}
+
+ .weekly p {
+    font-size: 12px;
+    font-weight: 400;
+    color: var( --header-color-2);
+}
+
+.weekly svg {
+    fill: var( --header-icon-color);
+}
+
+.sortby-options {
+    position: absolute;
+    right: 1px;
+    top: 18px;
+    width: 94px;
+    height: 80px;
+    background-color: var(--white-color);
+    border-radius: 0 0 10px 10px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    z-index: 100;
+    overflow: hidden;
+    animation: increaseH2 .5s ease forwards ;
+    
+}
+
+.sortby-options-hide {
+    position: absolute;
+    right: 1px;
+    top: 18px;
+    width: 94px;
+    height: 80px;
+    background-color: var(--white-color);
+    border-radius: 0 0 10px 10px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    overflow: hidden;
+    z-index: 100;
+    animation: reduceH2 .5s ease forwards ;
+}
+
+ .sortby-options button, .sortby-options-hide button {
+    height: fit-content;
+    width: fit-content;
+    background-color: transparent;
+    border: none;
+}
+
+ .sortby-options button p,.sortby-options-hide button p {
+    font-size: 12px;
+    font-weight: 400;
+    color: var( --header-color-2);
+    margin: 0;
+}
+
+.sortby-options button:hover p{
+    color: var(--logo-color);
+}
+
+.sortby-options-1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 15px;
+    animation: slideDown2 .5s ease forwards ;
+}
+
+.sortby-options-hide-1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 15px;
+    animation: slideUp2 .5s ease forwards ;
+}
+
+.barchart-container-1 {
+    width: 100%;
+    height: 333px;
+}
+
+/* media queries.......................................... */
+
+
+@media screen and (max-width: 1204px) {
+    .barchart-container {
+        width: unset;
+        max-width: unset;
+    }
+}
+
+@media screen and (max-width: 648px) {
+    .barchart-container-1 {
+        overflow: hidden;
+        overflow-x: scroll;
+        scroll-behavior: smooth;
+        box-shadow: -11px -4px 21px -19px var(--box-shadow-color) inset;
+    }
+}
+
+
+@media screen and (max-width: 375px) {
+
+    .barchart-header {
+        margin-bottom: 20px;
+    }
+
+    .sortby {
+        flex-direction: column;
+    }
+
+    .sortby-options {
+        top: 50px;
+    }
+
+    .sortby-options-hide {
+        top: 50px;
+    }
+}
