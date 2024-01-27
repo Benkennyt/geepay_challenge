@@ -66,6 +66,9 @@ const Header = (props: any) => {
       </div>
       <div className={ toggleProfileNav ? "profile-nav-1" : 'profile-nav-hide-1'}>
         <div className={ toggleProfileNav ? "profile-nav" : 'profile-nav-hide'}>
+          <div className="profile-name-2">
+            <p>Justin Bergson</p>
+          </div>
           <button onClick={() => setToggleProfileNav(false)} ><ListIcon/><p>Purchases and reviews</p></button>
             <button onClick={() => setToggleProfileNav(false)}><ProfileIcon/><p> View your profile</p></button>
             <button onClick={() => setToggleProfileNav(false)} ><SettingsIcon2/><p>Settings</p></button>
