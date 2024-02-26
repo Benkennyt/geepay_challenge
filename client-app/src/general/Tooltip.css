@@ -6,8 +6,9 @@
 
 .tooltip-container-hide {
     position: absolute;
-    bottom: -40px;
-    animation: slideUp .3s ease forwards;
+    display: none;
+
+ 
 }
 
 .tooltip {

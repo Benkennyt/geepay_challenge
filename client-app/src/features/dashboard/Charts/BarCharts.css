@@ -108,13 +108,12 @@
     right: 1px;
     top: 18px;
     width: 94px;
-    height: 80px;
+    height: 0;
     background-color: var(--white-color);
     border-radius: 0 0 10px 10px;
     box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
     overflow: hidden;
     z-index: 100;
-    animation: reduceH2 .5s ease forwards ;
 }
 
  .sortby-options button, .sortby-options-hide button {
@@ -150,7 +149,6 @@
     justify-content: center;
     align-items: center;
     padding-top: 15px;
-    animation: slideUp2 .5s ease forwards ;
 }
 
 .barchart-container-1 {

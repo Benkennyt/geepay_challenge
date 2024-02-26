@@ -64,7 +64,7 @@ const Header = (props: any) => {
           <DownToggleIcon />
         </button>
       </div>
-      <div className={ toggleProfileNav ? "profile-nav-1" : 'profile-nav-hide-1'}>
+      <div className={toggleProfileNav ? "profile-nav-1" : 'profile-nav-hide-1'}>
         <div className={ toggleProfileNav ? "profile-nav" : 'profile-nav-hide'}>
           <div className="profile-name-2">
             <p>Justin Bergson</p>

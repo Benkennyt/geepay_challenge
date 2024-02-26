@@ -1,6 +1,5 @@
 header {
     position: sticky;
-    
     max-width: 1440px;
     top: 0;
     display: flex;
@@ -138,8 +137,6 @@ header p:first-child {
     justify-content: center;
     align-items: center;
     margin-left: 10px;
-    
-    
 }
 
 .header-icon {
@@ -206,7 +203,7 @@ header p:first-child {
     border-radius: 28px;
     font-family: Inter;
     background-color: var(--mainContainer-color);
-    z-index: 201;
+    z-index: 2000;
 }
 
 .profile::before{
@@ -294,12 +291,15 @@ header p:first-child {
     top: 41px;
     right: 13px;
     width: 210px;
-    height: 170px;
+    height: 0;
     overflow: hidden;
     border-radius: 0px 0px 10px 10px;
     box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
-    animation: reduceH .5s ease forwards ;
     z-index: 200;
+}
+
+.empty {
+    display: none;
 }
 
 .profile-nav {
@@ -312,9 +312,7 @@ header p:first-child {
 .profile-nav-hide {
     padding: 5px;
     padding-top: 40px;
-    background-color: var(--mainContainer-color);
-    animation: slideUp2 .5s ease forwards ;
-    
+    background-color: var(--mainContainer-color);  
 }
 
 .profile-nav button:hover  {
