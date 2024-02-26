@@ -6,10 +6,6 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-family: Plus Jakarta Sans;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
 }
 
 code {

@@ -87,7 +87,6 @@ const Dashboard = () => {
     <div className="dashboard-container">
 
       <Sidebar isToggled={isToggled} setIsToggled={setIsToggled} toggleSideBar={toggleSideBar} setToggleSideBar={setToggleSideBar} handleFocusedPageButton={handleFocusedPageButton} focused={focused}/>
-
       <div className="analytics-container">
         <Header handleToggle={handleToggle} toggleSearchBar={toggleSearchBar} setTooltipVisible2={setTooltipVisible2} tooltipVisible2={tooltipVisible2} setTooltipVisible={setTooltipVisible} tooltipVisible={tooltipVisible} toggleProfileNav={toggleProfileNav} setToggleProfileNav={setToggleProfileNav}/>
         

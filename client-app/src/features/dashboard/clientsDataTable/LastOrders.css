@@ -4,8 +4,8 @@
     min-width: 530px;
     height: fit-content; 
     background-color: var(--white-color);
-    padding: 20px;
     border-radius: 14px;
+    padding: 20px ;
 }
 
 .last-orders-header {
@@ -49,13 +49,24 @@ table th {
     text-align: left;
     color: var(--table-header-color);
     font-weight: 500;
-
 }
+
 
 table td {
     color: var(--table-header-color);
     font-weight: 400;
 }
+
+table tbody td {
+    padding-left: 10px ;
+}
+
+table tbody tr:hover {
+    background-color: var( --transparentLogo-color);
+    cursor: pointer;
+
+}
+
 
 
 .client-name-payment {
@@ -91,6 +102,10 @@ table tr td a {
     color: var(--table-text-color-2);
     text-decoration: none;
     gap: 5px;
+}
+
+table tr td a:hover {
+    color: var(--table-header-color);
 }
 
 

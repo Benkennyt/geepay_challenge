@@ -1,5 +1,6 @@
 .barchart-container {
     width: 100%;
+    height: 100%;
     max-width: 806px;
     padding: 20px;
     background-color: var(--white-color);
@@ -154,13 +155,13 @@
 
 .barchart-container-1 {
     width: 100%;
-    height: 333px;
+    height:300px;
 }
 
 /* media queries.......................................... */
 
 
-@media screen and (max-width: 1204px) {
+@media screen and (max-width: 1261px) {
     .barchart-container {
         width: unset;
         max-width: unset;

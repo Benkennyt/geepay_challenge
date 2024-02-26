@@ -1,10 +1,16 @@
 header {
-    position: relative;
+    position: sticky;
+    
+    max-width: 1440px;
+    top: 0;
     display: flex;
     justify-content:space-between ;
     align-items: center;
+    background-color: var(--mainContainer-color);
     height: 88px;
     border-bottom: 1px solid var(--border-color);
+    z-index: 2000;
+    
 }
 
 .hamburger {
@@ -556,13 +562,12 @@ header p:first-child {
     }
 }
 
-@media screen and (max-width: 484px) {
-    .search .searchbar-1 {
-        left: 5%;
-    }
-}
+
 
 @media screen and (max-width: 484px) {
+    header {
+        width: 100%;
+    }
     .search .searchbar-1 {
         left: 5px;
         width: 300px;
