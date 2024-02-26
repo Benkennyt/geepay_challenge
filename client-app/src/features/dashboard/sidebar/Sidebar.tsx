@@ -7,15 +7,15 @@ const Sidebar = (props: any) => {
   return (
     <div className={toggleSideBar ? "sidebar" : "sidebar-hide sidebar" }>
       <div className="sidebar-a">
+              {toggleSideBar && <button onClick={() => setToggleSideBar(false)} className="close-btn hamburger">
+                <CloseIcon/>
+              </button>}
         <div className="sidebar-b">
           <div className="sidebar-1">
             <div className="logo">
               <button>
                 <Logo />
               </button>
-              {toggleSideBar && <button onClick={() => setToggleSideBar(false)} className="close-btn hamburger">
-                <CloseIcon/>
-              </button>}
             </div>
             <div className="top-icons icons-1">
               <button onClick={() => handleFocusedPageButton(1)} className={focused == 1 ? 'focused-btn-bulk-icon' :"unfocused-btn-bulk-icon"}>
