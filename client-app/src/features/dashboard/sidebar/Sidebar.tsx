@@ -101,7 +101,7 @@ const Sidebar = (props: any) => {
             <button>
               <SettingsIcon />
             </button>
-            <button>
+            <button >
               <LogOutIcon />
             </button>
           </div>
