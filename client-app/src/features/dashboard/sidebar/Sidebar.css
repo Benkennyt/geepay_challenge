@@ -23,7 +23,7 @@
 }
 
 .sidebar-b {
-  width: 100%;
+  width: 80px;
   height: 976px;
   display: flex;
   padding: 20px 0px;
@@ -43,7 +43,7 @@
 
 .sidebar-1 {
   display: flex;
-  width: 100%;
+  width: 80px;
   flex-direction: column;
   gap: 20px;
 }
