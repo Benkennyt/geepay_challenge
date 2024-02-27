@@ -28,7 +28,6 @@ const Sidebar = (props: any) => {
   
   return (
     <div className={toggleSideBar ? "sidebar" : "sidebar-hide sidebar"}>
-      <div className="sidebar-a">
         {toggleSideBar && (
           <button
             onClick={() => setToggleSideBar(false)}
@@ -37,6 +36,7 @@ const Sidebar = (props: any) => {
             <CloseIcon />
           </button>
         )}
+      <div className="sidebar-a">
         <div className="sidebar-b">
           <div className="sidebar-1">
             <div className="logo">
