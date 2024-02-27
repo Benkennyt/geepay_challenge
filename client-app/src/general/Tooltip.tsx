@@ -9,7 +9,7 @@ const Tooltip = (props: any) => {
       <div className={tooltipVisible ? "tooltip-container" : "tooltip-container-hide"}>
           <div className="tooltip">{text}</div>
       </div>
-      <div className={tooltipVisible2 ? "tooltip-container" : "tooltip-container-hide"}>
+      <div className={tooltipVisible2 ? "tooltip-container date-tip" : "tooltip-container-hide"}>
           <div className="tooltip">{text2}</div>
       </div>
     </>

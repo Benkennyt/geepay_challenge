@@ -18,6 +18,8 @@ const Dashboard = () => {
   const [changeSort, setChangeSort  ] = useState('Weekly');
   const [focused, setFocused] = useState(1)
 
+  
+
   const handleToggle = (key: number) => {
     if (toggleProfileNav && key == 1) {
         setToggleProfileNav(false)
@@ -88,12 +90,12 @@ const Dashboard = () => {
 
       <Sidebar isToggled={isToggled} setIsToggled={setIsToggled} toggleSideBar={toggleSideBar} setToggleSideBar={setToggleSideBar} handleFocusedPageButton={handleFocusedPageButton} focused={focused}/>
       <div className="analytics-container">
-        <Header handleToggle={handleToggle} toggleSearchBar={toggleSearchBar} setTooltipVisible2={setTooltipVisible2} tooltipVisible2={tooltipVisible2} setTooltipVisible={setTooltipVisible} tooltipVisible={tooltipVisible} toggleProfileNav={toggleProfileNav} setToggleProfileNav={setToggleProfileNav}/>
+        <Header handleToggle={handleToggle} toggleSearchBar={toggleSearchBar} setToggleSearchBar={setToggleSearchBar} setTooltipVisible2={setTooltipVisible2} tooltipVisible2={tooltipVisible2} setTooltipVisible={setTooltipVisible} tooltipVisible={tooltipVisible} toggleProfileNav={toggleProfileNav} setToggleProfileNav={setToggleProfileNav}/>
         
         <div className="analytics-container-2">
           <p className="dashboard-2">Dashboard</p>
           <div className="top-charts"> 
-            <BarCharts isToggled={isToggled} handleToggle={handleToggle} handleSortToggle={handleSortToggle} toggleSort={toggleSort} changeSort={changeSort}/>
+            <BarCharts isToggled={isToggled} handleToggle={handleToggle} handleSortToggle={handleSortToggle} toggleSort={toggleSort} setToggleSort={setToggleSort} changeSort={changeSort}/>
             <Totals/>
           </div>
           <div className="last-orders-top-platform">

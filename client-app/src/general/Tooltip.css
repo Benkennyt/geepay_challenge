@@ -4,10 +4,12 @@
     animation: slideDown .3s ease;
 }
 
-.tooltip-container-hide {
-    position: absolute;
-    display: none;
+.date-tip{
+    bottom: -55px;
+}
 
+.tooltip-container-hide {
+    display: none !important;
  
 }
 

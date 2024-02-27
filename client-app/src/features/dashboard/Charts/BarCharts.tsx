@@ -11,15 +11,23 @@ import {
   Label,
   Legend,
 } from "recharts";
-import { useState } from "react";
+import { useRef, useState } from "react";
 import BarChartTooltip from "../../../general/BarChartTooltip";
 import { DownToggleIcon } from "../../../assets/SVG";
+import { useClickOutside } from "../../../hooks/ClickedOutside";
 
 const BarCharts = (props: any) => {
-  const { handleToggle, handleSortToggle, toggleSort, changeSort, isToggled } =
+  const sortRef = useRef(null)
+  const { handleToggle, handleSortToggle, toggleSort, setToggleSort, changeSort, isToggled } =
     props;
   const [barHover, setBarHover] = useState(-1);
   const [barData, setBarData] = useState<any>({});
+
+  const closeSort = () => {
+    setToggleSort(false)
+  }
+  
+  useClickOutside(sortRef, closeSort)
 
   const data = [
     {
@@ -76,31 +84,31 @@ const BarCharts = (props: any) => {
     <div className="barchart-container">
       <div className="barchart-header">
         <p>Sales Trend</p>
-        <div className="sortby">
+        <div ref={sortRef} className="sortby">
           <p>Sort by:</p>
           <button onClick={() => handleToggle(2)} className="weekly">
             <p>{changeSort}</p>
             <DownToggleIcon />
           </button>
-        </div>
-        <div className={toggleSort ? "sortby-options" : "sortby-options-hide"}>
-          <div
-            className={
-              toggleSort ? "sortby-options-1" : "sortby-options-hide-1"
-            }
-          >
-            <button onClick={() => handleSortToggle("monthly")}>
-              <p>Monthly</p>
-            </button>
-            <button onClick={() => handleSortToggle("weekly")}>
-              <p>Weekly</p>
-            </button>
-            <button onClick={() => handleSortToggle("3 days")}>
-              <p>3 days</p>
-            </button>
-            <button onClick={() => handleSortToggle("today")}>
-              <p>Today</p>
-            </button>
+          <div className={toggleSort ? "sortby-options" : "sortby-options-hide"}>
+            <div
+              className={
+                toggleSort ? "sortby-options-1" : "sortby-options-hide-1"
+              }
+            >
+              <button onClick={() => handleSortToggle("monthly")}>
+                <p>Monthly</p>
+              </button>
+              <button onClick={() => handleSortToggle("weekly")}>
+                <p>Weekly</p>
+              </button>
+              <button onClick={() => handleSortToggle("3 days")}>
+                <p>3 days</p>
+              </button>
+              <button onClick={() => handleSortToggle("today")}>
+                <p>Today</p>
+              </button>
+            </div>
           </div>
         </div>
       </div>

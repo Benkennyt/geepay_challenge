@@ -336,7 +336,7 @@ header p:first-child {
     background-color: transparent;
     display: flex;
     align-items: center;
-    width: 100%;
+    width:fit-content;
     gap: 10px;
     margin-bottom: 10px;
 }
@@ -444,6 +444,9 @@ header p:first-child {
  }
 
  @media screen and (max-width: 851px) {
+    header {
+        justify-content: space-between;
+    }
     .hamburger {
         display: unset;
     }
@@ -463,7 +466,7 @@ header p:first-child {
 
     .search {
         display: unset !important;
-        z-index: 1000;
+        z-index: 3000;
     }
 
     .search .searchbar-1 {
@@ -472,10 +475,10 @@ header p:first-child {
         justify-content: center;
         align-items: center;
         bottom: -86px;
-        left: 30%;
+        left: calc(-35vw);
         background-color: var(--white-color);
-        width: 320px;
-        height: 85px;
+        width: 300px;
+        height: 63px;
         border-radius: 40px;
         box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
         animation: slideDown .5s forwards;
@@ -492,6 +495,7 @@ header p:first-child {
         margin-top: 2px;
         width: 93%;
     }
+
  }
 
  @media screen and (max-width: 681px) {
@@ -554,11 +558,6 @@ header p:first-child {
     }
 }
 
-@media screen and (max-width: 472px) {
-    .dashboard-search p {
-        display: none;
-    }
-}
 
 
 
@@ -566,10 +565,14 @@ header p:first-child {
     header {
         width: 100%;
     }
+}
+
+@media screen and (max-width: 472px) {
+    .dashboard-search p {
+        display: none;
+    }
+
     .search .searchbar-1 {
-        left: 5px;
-        width: 300px;
-        height: 63px;
-        border-radius: 40px;
+        left: calc(-20vw);
     }
 }
