@@ -36,7 +36,6 @@ const Sidebar = (props: any) => {
             <CloseIcon />
           </button>
         )}
-      <div className="sidebar-a">
         <div className="sidebar-b">
           <div className="sidebar-1">
             <div className="logo">
@@ -106,7 +105,6 @@ const Sidebar = (props: any) => {
             </button>
           </div>
         </div>
-      </div>
     </div>
   );
 };

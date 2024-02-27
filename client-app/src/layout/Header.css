@@ -482,19 +482,28 @@ header p:first-child {
         border-radius: 40px;
         box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
         animation: slideDown .5s forwards;
+        
     }
 
     .search .searchbar {
         display: unset;
-        max-width: 270px;
+        height: 45px;
+        max-width: 280px;
+        padding: 0px;
+        margin: 0px;
+        overflow: hidden;
     }
 
     .search .searchbar input {
-        padding-left: 10px;
-        height: 43px;
-        margin-top: 2px;
-        width: 93%;
+        height: 100%;
+        width: 100%;
+        margin-left: unset;
     }
+
+    .search .searchbar input[type = 'text'] {
+        padding: 0px 0px 0px 10px;
+    }
+
 
  }
 
